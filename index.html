@@ -87,24 +87,31 @@
         }
         .print-button:hover {
             background-color: #218838;
-        }
-        @media print {
-            body {
-                margin: 0;
-                padding: 0;
-            }
-            .container {
-                box-shadow: none;
-                border: none;
-                margin: 0;
-                padding: 0;
-                width: 21cm;
-                min-height: 29.7cm; /* A4 height */
-            }
-            .print-button {
-                display: none;
-            }
-        }
+        }@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        box-shadow: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: 21cm;
+        min-height: 29.7cm; /* A4 height */
+    }
+    .print-button {
+        display: none;
+    }
+
+    /* هنا الجزء المهم */
+    .image-container img {
+        max-width: 500px;   /* أقصى عرض في الطباعة */
+        max-height: 400px;  /* أقصى ارتفاع في الطباعة */
+        width: auto;
+        height: auto;
+    }
+}
     </style>
 </head>
 <body>
